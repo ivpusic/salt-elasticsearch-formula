@@ -1,5 +1,4 @@
-#
-salt-elasticsearch-formula
+# salt-elasticsearch-formula
 
 Salt formula for installing elasticsearch (5.6.3) to ubuntu
 
