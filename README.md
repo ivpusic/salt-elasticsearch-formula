@@ -9,3 +9,11 @@ base:
   '*':
     - elasticsearch
 ```
+
+Example pillar:
+
+```salt
+elasticsearch:
+  plugins:
+    discovery-ec2: discovery-ec2
+```
