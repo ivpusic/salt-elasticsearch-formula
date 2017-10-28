@@ -22,10 +22,10 @@ node.name: ${HOSTNAME}
 #
 network.host: {{network.host}}
 
-{% if discovery.zen is not none %}
+{% if 'zen' in discovery %}
 # initial hosts when using zen discovery
 discovery.zen.ping.unicast.hosts: {{discovery.zen.hosts}}
-{% elif discovery.ec2 is not none %}
+{% elif 'aws' in discovery %}
 # discovery using aws
 cloud:
     aws:
