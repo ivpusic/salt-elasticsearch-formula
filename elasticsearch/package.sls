@@ -1,6 +1,8 @@
+{% from "elasticsearch/map.jinja" import es_config with context %}
+
 include:
   - elasticsearch.repo
 
 elasticsearch:
   pkg.installed:
-    - version: 5.6.3
+    - version: {{es_config.version}}
