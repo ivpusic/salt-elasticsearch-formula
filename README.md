@@ -10,6 +10,20 @@ base:
     - elasticsearch
 ```
 
+Exapmle pillar for single node:
+
+```yaml
+elasticsearch:
+  lookup:
+    cluster_name: 'salt-cluster'
+    version: '5.6.3'
+    use_memory: 0.5
+    bootstrap:
+      memory_lock: 'true'
+    network:
+      host: '0.0.0.0'
+```
+
 Example pillar for zen discovery:
 
 ```yaml
