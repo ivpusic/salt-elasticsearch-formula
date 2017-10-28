@@ -1,5 +1,12 @@
 {% from "elasticsearch/map.jinja" import es_config with context %}
 
+/etc/systemd/system/elasticsearch.service.d/override.conf:
+  file.managed:
+    - source: salt://elasticsearch/files/elasticsearch.service
+    - makedirs: True
+    - user: root
+    - group: root
+
 /etc/elasticsearch/jvm.options:
   file.managed:
     - source: salt://elasticsearch/files/jvm.options

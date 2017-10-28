@@ -4,12 +4,10 @@
 #
 bootstrap.memory_lock: {{bootstrap.memory_lock}}
 
-# test {{bootstrap.test}}
-
 #
 # Use a descriptive name for your cluster:
 #
-# cluster.name: {{cluster_name}}
+cluster.name: {{cluster_name}}
 #
 # ------------------------------------ Node ------------------------------------
 #
