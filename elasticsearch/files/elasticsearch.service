@@ -1,0 +1,7 @@
+[Service]
+LimitMEMLOCK=infinity
+
+# Restart On Failure
+StartLimitInterval=20s
+Restart=always
+RestartSec=3
