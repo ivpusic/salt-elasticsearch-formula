@@ -23,12 +23,19 @@ node.name: ${HOSTNAME}
 network.host: {{network.host}}
 
 {% if discovery.zen is not none %}
-# --------------------------------- Discovery ----------------------------------
-#
-# Pass an initial list of hosts to perform discovery when new node is started:
-# The default list of hosts is ["127.0.0.1", "[::1]"]
-#
+# initial hosts when using zen discovery
 discovery.zen.ping.unicast.hosts: {{discovery.zen.hosts}}
 {% elif discovery.ec2 is not none %}
-# todo
+# discovery using aws
+cloud:
+    aws:
+        access_key: {{discovery.aws.access_key}}
+        secret_key: {{discovery.aws.secret_key}}
+        region: {{discovery_aws.region}}
+
+discovery:
+    type: ec2
+
+plugin.mandatory: discovery-ec2
+discovery.ec2.groups: {{discovery.aws.security_groups}}
 {% endif %}
