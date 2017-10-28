@@ -4,7 +4,7 @@ Salt formula for installing elasticsearch (5.6.3) to ubuntu
 
 Example `top.sls`:
 
-```salt
+```yaml
 base:
   '*':
     - elasticsearch
@@ -12,8 +12,10 @@ base:
 
 Example pillar:
 
-```salt
+```yaml
 elasticsearch:
-  plugins:
-    discovery-ec2: discovery-ec2
+  lookup:
+    use_memory: 0.6
+    plugins:
+      discovery-ec2: discovery-ec2
 ```

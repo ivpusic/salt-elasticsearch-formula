@@ -1,4 +1,5 @@
-{% set plugins_list = salt['pillar.get']('elasticsearch:plugins', {}) %}
+{% from "elasticsearch/map.jinja" import es_config with context %}
+{% set plugins_list = es_config.plugins %}
 {% set plugins_bin = '/usr/share/elasticsearch/bin/elasticsearch-plugin' %}
 
 {% for name, repo in plugins_list.items() %}

@@ -19,8 +19,10 @@
 # Xms represents the initial size of total heap space
 # Xmx represents the maximum size of total heap space
 
--Xms1g
--Xmx1g
+{% set memory = (grains['mem_total'] * use_memory) | int %}
+
+-Xms{{memory}}m
+-Xmx{{memory}}m
 
 ################################################################
 ## Expert settings

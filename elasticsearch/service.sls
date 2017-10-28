@@ -3,3 +3,5 @@ elasticsearch_service:
     - name: elasticsearch
     - enable: True
     - restart: True
+    - watch:
+      - file: /etc/elasticsearch/jvm.options
