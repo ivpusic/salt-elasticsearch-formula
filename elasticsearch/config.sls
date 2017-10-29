@@ -1,5 +1,9 @@
 {% from "elasticsearch/map.jinja" import es_config with context %}
 
+vm.max_map_count:
+  sysctl.present:
+    - value: 262144
+
 /etc/systemd/system/elasticsearch.service.d/override.conf:
   file.managed:
     - source: salt://elasticsearch/files/elasticsearch.service
