@@ -10,7 +10,7 @@ base:
     - elasticsearch
 ```
 
-Exapmle pillar for single node:
+#### Example pillar for single node:
 
 ```yaml
 elasticsearch:
@@ -24,7 +24,7 @@ elasticsearch:
       host: '0.0.0.0'
 ```
 
-Example pillar for zen discovery:
+#### Example pillar for zen discovery:
 
 ```yaml
 elasticsearch:
@@ -44,7 +44,7 @@ elasticsearch:
           - '172.17.0.5'
 ```
 
-Example pillar for aws discovery:
+#### Example pillar for aws discovery:
 
 ```yaml
 elasticsearch:
