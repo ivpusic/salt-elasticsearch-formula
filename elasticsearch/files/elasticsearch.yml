@@ -31,7 +31,7 @@ cloud:
     aws:
         access_key: {{discovery.aws.access_key}}
         secret_key: {{discovery.aws.secret_key}}
-        region: {{discovery_aws.region}}
+        region: {{discovery.aws.region}}
 
 discovery:
     type: ec2
